@@ -109,7 +109,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home-outline.png"))); // NOI18N
         btn_Principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Principal");
         btn_Principal.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
@@ -136,7 +136,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/calendar-multiple-check.png"))); // NOI18N
         btn_Oficinas.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Oficinas");
         btn_Oficinas.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
@@ -180,17 +180,17 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/calendar-plus.png"))); // NOI18N
         btn_Mapa.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Mapa");
         btn_Mapa.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
         Menu.add(btn_Mapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
 
-        app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        app_name.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
         app_name.setForeground(new java.awt.Color(255, 255, 255));
-        app_name.setText("RoutPlanner");
-        Menu.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+        app_name.setText("CROQUIS FISI");
+        Menu.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 230, -1));
 
         jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
         Menu.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 190, 20));
@@ -200,15 +200,15 @@ public class Dashboard extends javax.swing.JFrame {
         Header.setBackground(new java.awt.Color(25, 118, 210));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Control Rutas Distribución");
-        Header.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, 30));
+        jLabel2.setText("Croquis FISI");
+        Header.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, 30));
 
-        dateText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        dateText.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         dateText.setForeground(new java.awt.Color(255, 255, 255));
-        dateText.setText("Hoy es Sábado 28 de Abril de 2018");
-        Header.add(dateText, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 36, -1, 30));
+        dateText.setText("Hoy es Sábado 5 de Agosto de 2023");
+        Header.add(dateText, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, 30));
 
         red_squr.setBackground(new java.awt.Color(25, 118, 210));
         red_squr.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -224,8 +224,9 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        exit.setBackground(new java.awt.Color(0, 0, 0));
         exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        exit.setForeground(new java.awt.Color(102, 102, 102));
+        exit.setForeground(new java.awt.Color(0, 0, 0));
         exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         exit.setText("X");
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

@@ -139,149 +139,151 @@ public static int DistanciaMin(Vertex<RoadPoint> nodo1, Vertex<RoadPoint>  nodo2
 public static void IniciarNodos(){
     //Graph grafo = MaphGraph.grafo;
     //ArrayList<Vertex<RoadPoint>> ListaRoadPoints = MaphGraph.getRoadPoints();
-    ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "0",117,580,1,"ENTRADA")));
-    ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "1",117,534,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "2",84,534,1,"ECONOMIA")));
+    ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "0",153,580,1,"ENTRADA")));
+    ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "1",153,534,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "2",130,540,1,"ECONOMIA")));
  ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "3",98,515,1,"DGA")));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "4",144,568,1,"A.DOCENTE")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "5",169,534,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "6",169,515,1,"CERSEU")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "7",242,534,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "8",242,460,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "9",186,461,1,"DIRECCION ECC")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "10",242,443,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "4",176,560,1,"A.DOCENTE")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "5",200,534,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "6",200,529,1,"CERSEU")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "7",285,534,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "8",285,460,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "9",227,461,1,"DIRECCION ECC")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "10",322,464,1)));
 
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "11",469,443,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "12",469,463,1,"AULAS COD100")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "13",566,443,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "14",566,423,1,"AULAS_2 COD100")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "15",697,443,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "16",697,538,1))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "17",697,500,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "18",615,500,1,"ENTRADA 2")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "19",651,500,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "20",651,511,1,"QUIOSCO")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "21",243,416,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "22",187,417,1,"UNMSM")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "23",243,375,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "24",168,375,1))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "25",243,326,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "26",187,326,1,"SSHH-N1-AP")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "27",243,249,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "28",201,249,1,"AUDITORIO")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "29",243,273,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "30",554,274,1,"LOSA DEPORTIVA")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "31",342,274,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "32",342,348,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "33",656,348,1,"VESTIDORES")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "34",587,348,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "35",588,365,1,"CAPILLA")));
-  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "36",243,56,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "37",243,25,1)));//Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "11",469,464,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "12",469,476,1,"AULAS COD100")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "13",566,464,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "14",566,452,1,"AULAS_2 COD100")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "15",721,464,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "16",721,550,1))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "17",721,521,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "18",633,521,1,"ENTRADA 2")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "19",680,521,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "20",680,528,1,"QUIOSCO")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "21",285,405,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "22",227,405,1,"UNMSM")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "23",285,364,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "24",200,364,1))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "25",285,326,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "26",227,326,1,"SSHH-N1-AP")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "27",285,249,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "28",260,249,1,"AUDITORIO")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "29",285,273,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "30",537,260,1,"LOSA DEPORTIVA")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "31",325,274,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "32",325,348,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "33",737,348,1,"VESTIDORES")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "34",638,348,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "35",638,367,1,"CAPILLA")));
+  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "36",285,56,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "37",285,23,1)));//Escalera
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "38",111,56,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "39",111,33,1,"AULAS-N1-NP1")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "40",371,56,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "41",371,71,1,"SSHH-N1-NP")));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "39",111,45,1,"AULAS-N1-NP1")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "40",404,56,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "41",404,65,1,"SSHH-N1-NP")));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "42",472,56,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "43",660,56,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "44",660,26,1)));//Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "43",688,56,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "44",688,26,1)));//Escalera
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "45",527,56,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "46",527,32,1,"AULAS-N1-NP2")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "47",626,348,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "48",626,386,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "49",845,386,1)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "50",845,458,1,"ENTRADA 3")));    
-  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "51",117,568,1)));   
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "46",527,45,1,"AULAS-N1-NP2")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "47",727,348,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "48",727,386,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "49",838,386,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "50",838,408,1,"ENTRADA 3")));    
+  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "51",153,560,1)));   
  
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "52",207,534,1)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "53",207,568,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "52",240,534,1)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "53",240,568,1)));
   
   //  SEGUNDO PISO   ........................
  
 
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "54",275,384,2,"SALA PROFESORES")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "55",170,530,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "56",170,553,2,"DECANATO")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "57",241,400,2)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "58",191,400,2))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "54",275,342,2,"SALA PROFESORES")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "55",170,517,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "56",170,527,2,"DECANATO")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "57",241,362,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "58",191,362,2))); //Escalera
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "59",241,336,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "60",196,336,2,"SSHH-N2-AP")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "61",241,295,2)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "62",281,295,2)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "63",319,295,2))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "60",226,336,2,"SSHH-N2-AP")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "61",241,277,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "62",281,277,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "63",351,277,2))); //Escalera
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "64",281,240,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "65",234,240,2,"COMEDOR")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "66",281,25,2))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "65",260,240,2,"COMEDOR")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "66",281,24,2))); //Escalera
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "67",146,55,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "68",146,32,2,"AULAS-N2-NP")));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "68",146,45,2,"AULAS-N2-NP")));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "69",400,55,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "70",400,76,2,"SSHH-N2-NP")));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "70",400,65,2,"SSHH-N2-NP")));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "71",590,55,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "72",590,76,2,"DATA CENTER")));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "72",590,65,2,"DATA CENTER")));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "73",688,55,2)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "74",688,26,2))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "75",515,30,2,"LABOTATORIOS-N2-NP")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "74",688,24,2))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "75",515,45,2,"LABOTATORIOS-N2-NP")));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "76",515,55,2)));
-   ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "77",275,441,2)));
-ListaRoadPoints.add(grafo.insertVertex(new OfficePoint("78" ,331,447,2,"TROFEOS")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "79",559,447,2)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "80",465,447,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "81",464,468,2,"AULAS COD200")));
+   ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "77",275,456,2)));
+ListaRoadPoints.add(grafo.insertVertex(new OfficePoint("78" ,388,456,2,"TROFEOS")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "79",559,464,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "80",465,464,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "81",465,474,2,"AULAS COD200")));
  ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "82",559,427,2,"AULAS2 COD200")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "83",641,447,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "84",641,419,2,"TERCIO EST.")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "85",707,447,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "86",707,426,2,"AULAS3 COD200")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "87",787,447,2)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "88",787,417,2,"AULA MAGNA")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "83",641,464,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "84",641,455,2,"TERCIO EST.")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "85",707,464,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "86",707,455,2,"AULAS3 COD200")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "87",787,464,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "88",787,455,2,"AULA MAGNA")));
  ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "89",787,472,2,"LABORAT-N2-AP")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "90",707,536,2))); //Escalera
-  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "91",275,401,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "90",707,555,2))); //Escalera
+  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "91",275,362,2)));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "92",281,55,2)));
   
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "93",275,572,2))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "94",275,530,2)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "93",275,560,2))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "94",275,517,2)));
 // 3er piusooooooooo
 
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint("95" ,217,547,3,"UNAYOE")));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint("95" ,226,537,3,"UNAYOE")));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "96",277,478,3)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "97",277,455,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "97",277,465,3)));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "98",277,432,3)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "99",277,405,3)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "100",277,382,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "99",277,390,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "100",277,363,3)));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "101",277,330,3)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "102",277,50,3)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "103",277,24,3))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "104",196,50,3)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "105",196,32,3,"AULA MUSICA")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "102",277,55,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "103",277,25,3))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "104",196,55,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "105",196,44,3,"AULA MUSICA")));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "106",393,50,3)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "107",393,68,3,"SSHH-N3-NP")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "108",575,50,3)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "109",575,73,3,"LABORAT-N3-NP")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "110",689,50,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "107",393,64,3,"SSHH-N3-NP")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "108",575,55,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "109",575,64,3,"LABORAT-N3-NP")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "110",689,55,3)));
  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "111",689,23,3))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "112",401,455,3)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "113",401,434,3,"PUBLICIDAD")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "114",491,455,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "112",401,465,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "113",401,455,3,"PUBLICIDAD")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "114",491,465,3)));
  ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "115",491,476,3,"LABORAT-N3-AP")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "116",598,455,3)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "117",598,435,3,"SOPORTE")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "118",659,455,3)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "119",659,430,3,"DEP. SISTEMAS")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "120",701,455,3)));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "121",701,539,3))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "122",742,455,3)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "123",742,434,3,"LABORAT2-N3-AP")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "124",798,455,3)));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "125",798,432,3,"LABORAT3-N3-AP")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "116",540,465,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "117",540,455,3,"SOPORTE")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "118",659,465,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "119",659,455,3,"DEP. SISTEMAS")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "120",701,465,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "121",701,553,3))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "122",742,465,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "123",742,455,3,"LABORAT2-N3-AP")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "124",798,465,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "125",798,455,3,"LABORAT3-N3-AP")));
 
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "126",218,478,3,"DIR. SIST")));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "127",217,432,3,"DIR. SOFT")));
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "128",218,405,3,"MATRICULA")));
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "129",219,382,3))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "130",218,330,3,"SSHH-N3-AP")));
-  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "131",277,581,3))); //Escalera
- ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "132",277,547,3)));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "126",227,478,3,"DIR. SIST")));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "127",227,432,3,"DIR. SOFT")));
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "128",227,390,3,"MATRICULA")));
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "129",190,363,3))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new OfficePoint( "130",227,330,3,"SSHH-N3-AP")));
+  ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "131",277,566,3))); //Escalera
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "132",277,526,3)));
+
+ ListaRoadPoints.add(grafo.insertVertex(new RoadPoint( "133",537,348,1)));
 }  
 
 
@@ -292,7 +294,7 @@ public static void IniciarAristas(){
         ArrayList<Vertex<RoadPoint>> n = MapGraph.getRoadPoints();
         ArrayList<Edge<RoadLink>> ListaRoadLinks = MapGraph.getRoadLinks();
 
-        ListaRoadLinks.add(grafo.insertEdge(n.get(0), n.get(1), new RoadLink(n.get(0), n.get(1),1)));
+        ListaRoadLinks.add(grafo.insertEdge(n.get(51), n.get(1), new RoadLink(n.get(51), n.get(1),1)));
         ListaRoadLinks.add(grafo.insertEdge(n.get(0), n.get(51), new RoadLink(n.get(0), n.get(51),1)));
         ListaRoadLinks.add(grafo.insertEdge(n.get(4), n.get(51), new RoadLink(n.get(4), n.get(51),1)));
         ListaRoadLinks.add(grafo.insertEdge(n.get(1), n.get(2), new RoadLink(n.get(1), n.get(2),1)));
@@ -319,7 +321,7 @@ public static void IniciarAristas(){
         ListaRoadLinks.add(grafo.insertEdge(n.get(20), n.get(19), new RoadLink(n.get(20), n.get(19),1)));
         ListaRoadLinks.add(grafo.insertEdge(n.get(18), n.get(19), new RoadLink(n.get(18), n.get(19),1)));
         
-         ListaRoadLinks.add(grafo.insertEdge(n.get(10), n.get(21), new RoadLink(n.get(10), n.get(21),1)));
+         ListaRoadLinks.add(grafo.insertEdge(n.get(8), n.get(21), new RoadLink(n.get(8), n.get(21),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(22), n.get(21), new RoadLink(n.get(22), n.get(21),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(23), n.get(21), new RoadLink(n.get(23), n.get(21),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(23), n.get(24), new RoadLink(n.get(23), n.get(24),1)));
@@ -328,15 +330,16 @@ public static void IniciarAristas(){
          ListaRoadLinks.add(grafo.insertEdge(n.get(29), n.get(25), new RoadLink(n.get(29), n.get(25),1)));
          
          ListaRoadLinks.add(grafo.insertEdge(n.get(29), n.get(31), new RoadLink(n.get(29), n.get(31),1)));
-         ListaRoadLinks.add(grafo.insertEdge(n.get(32), n.get(31), new RoadLink(n.get(32), n.get(31),1)));
-         ListaRoadLinks.add(grafo.insertEdge(n.get(32), n.get(34), new RoadLink(n.get(32), n.get(34),1)));
+             ListaRoadLinks.add(grafo.insertEdge(n.get(32), n.get(31), new RoadLink(n.get(32), n.get(31),1)));
+         ListaRoadLinks.add(grafo.insertEdge(n.get(32), n.get(133), new RoadLink(n.get(32), n.get(133),1)));
+         ListaRoadLinks.add(grafo.insertEdge(n.get(34), n.get(133), new RoadLink(n.get(34), n.get(133),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(35), n.get(34), new RoadLink(n.get(35), n.get(34),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(47), n.get(34), new RoadLink(n.get(47), n.get(34),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(47), n.get(33), new RoadLink(n.get(47), n.get(33),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(47), n.get(48), new RoadLink(n.get(47), n.get(48),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(49), n.get(48), new RoadLink(n.get(49), n.get(48),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(49), n.get(50), new RoadLink(n.get(49), n.get(50),1)));
-         ListaRoadLinks.add(grafo.insertEdge(n.get(30), n.get(31), new RoadLink(n.get(30), n.get(31),1)));
+         ListaRoadLinks.add(grafo.insertEdge(n.get(30), n.get(133), new RoadLink(n.get(30), n.get(133),1)));
          
          ListaRoadLinks.add(grafo.insertEdge(n.get(29), n.get(27), new RoadLink(n.get(29), n.get(27),1)));
          ListaRoadLinks.add(grafo.insertEdge(n.get(28), n.get(27), new RoadLink(n.get(28), n.get(27),1)));
@@ -456,11 +459,6 @@ public static void IniciarAristas(){
              
              ListaRoadLinks.add(grafo.insertEdge(n.get(16), n.get(90), new RoadLink(n.get(16), n.get(90))));
              ListaRoadLinks.add(grafo.insertEdge(n.get(121), n.get(90), new RoadLink(n.get(121), n.get(90))));
-  
-    
-    }
-
-    
-    
-
+             ListaRoadLinks.add(grafo.insertEdge(n.get(63), n.get(31), new RoadLink(n.get(63), n.get(31))));    
+    }        
 }
