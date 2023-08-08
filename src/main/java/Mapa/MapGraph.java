@@ -459,6 +459,10 @@ public static void IniciarAristas(){
              
              ListaRoadLinks.add(grafo.insertEdge(n.get(16), n.get(90), new RoadLink(n.get(16), n.get(90))));
              ListaRoadLinks.add(grafo.insertEdge(n.get(121), n.get(90), new RoadLink(n.get(121), n.get(90))));
-             ListaRoadLinks.add(grafo.insertEdge(n.get(63), n.get(31), new RoadLink(n.get(63), n.get(31))));    
-    }        
+             ListaRoadLinks.add(grafo.insertEdge(n.get(63), n.get(31), new RoadLink(n.get(63), n.get(31))));
+    }
+
+    
+    
+
 }

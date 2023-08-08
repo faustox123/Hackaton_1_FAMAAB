@@ -32,55 +32,65 @@ public class Principal extends javax.swing.JPanel {
         Text1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(750, 430));
         setPreferredSize(new java.awt.Dimension(1094, 670));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         body.setBackground(new java.awt.Color(255, 255, 255));
-        body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        javax.swing.GroupLayout bodyLayout = new javax.swing.GroupLayout(body);
+        body.setLayout(bodyLayout);
+        bodyLayout.setHorizontalGroup(
+            bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        bodyLayout.setVerticalGroup(
+            bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        Title.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
+        Title.setFont(new java.awt.Font("Arial", 3, 36)); // NOI18N
         Title.setText("Bienvenido");
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
-        Text1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        Text1.setText("Aplicación croquis  de la FISI");
-        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+        Text1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        Text1.setText("Aplicación croquis  de la FISI.");
+        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 350, -1));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jLabel1.setText("Obtener al rutas óptima para dirigirse al lugar que deseas ir.");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, 20));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel2.setText("Esta aplicación le permitirá ubicarse dentro de la FISI con una interfaz intuitiva y amigable.");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel2.setText("Se puede observar mediante una imagén la ubicación dónde se encuentra.");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, 40));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel3.setText("Se puede observar mediante una imagén la ubicación dónde se encuentra.");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel4.setText("• Cálculo de ruta óptima.");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 330, -1));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jLabel5.setText("• Croquis.");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 170, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 170, -1));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel6.setText("• Calculos de ruta minima.");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 240, -1));
+        jLabel6.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel6.setText("• Cálculos de ruta mínima.");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 320, -1));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel7.setText("• Calculo de ruta óptima.");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 320, -1));
+        jLabel3.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel3.setText("Esta aplicación le permitirá ubicarse dentro de la FISI con una interfaz intuitiva y amigable.");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel8.setText("• Oficinas.");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 330, -1));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fisi.png"))); // NOI18N
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -91,9 +101,9 @@ public class Principal extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }

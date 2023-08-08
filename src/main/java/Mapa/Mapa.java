@@ -45,11 +45,6 @@ public class Mapa extends JPanel implements MouseMotionListener, MouseListener{
     };
     Piso pisoActual = Piso.PRIMER_PISO;
 
-    public void setPisoActual(int NroPiso) {
-        this.pisoActual = Piso.values()[NroPiso];
-    }
-    
-    
     
     public Image imagen; 
     int  x=430, y=289, diametro=10;
@@ -64,9 +59,10 @@ public class Mapa extends JPanel implements MouseMotionListener, MouseListener{
     
     boolean MostrarClientesConPedido = false;
         
-    ArrayList <Edge<RoadLink>> Aristas = MapGraph.getRoadLinks();           
-    ArrayList<Vertex<RoadPoint>> Nodos  = MapGraph.getRoadPoints();
+        ArrayList <Edge<RoadLink>> Aristas = MapGraph.getRoadLinks();           
+        ArrayList<Vertex<RoadPoint>> Nodos  = MapGraph.getRoadPoints();  
 
+    
     
     public void setImagen(String path) {
         this.imagen = new ImageIcon(getClass().getResource(path)).getImage();
@@ -84,7 +80,8 @@ public class Mapa extends JPanel implements MouseMotionListener, MouseListener{
         addMouseMotionListener(this);
         addMouseListener(this);
     }
-
+    
+    
     public int getCX() {
         return x;
     }
@@ -97,7 +94,9 @@ public class Mapa extends JPanel implements MouseMotionListener, MouseListener{
     //Dibuja los nodos
     //La variable boolean MostrarEnumeracionGrafo decide si se muestra enum o no
     public void DibujarNodos(Graphics g){
-        //System.out.println("Nro nodos : "+ Nodos.size());
+        //System.out.println("Nro nodos : "+ Nodos.size());        
+        
+        
         switch(pisoActual){
             case PRIMER_PISO:{
                 for(Vertex<RoadPoint> pp: Nodos){
@@ -126,10 +125,11 @@ public class Mapa extends JPanel implements MouseMotionListener, MouseListener{
                 } 
                 break;
             }
-        }
+        }               
     }
     //Dibuja las aristas iniciales del mapa / grafo
-    public void DibujarAristas(Graphics g){   
+    public void DibujarAristas(Graphics g){ 
+        
          switch(pisoActual){
             case PRIMER_PISO:{
                 //System.out.println("Tam : " + Aristas.size());
@@ -216,7 +216,8 @@ public class Mapa extends JPanel implements MouseMotionListener, MouseListener{
             g.drawImage(imagen,0,0,getWidth(),getHeight(),this); 
             setOpaque(false);
             super.paint(g);
-           
+
+                       
                 //Dibujar puntero de mouse en mapa  
                 g.setColor(Color.YELLOW);
                ((Graphics2D)g).setStroke(new BasicStroke(2));
@@ -225,11 +226,13 @@ public class Mapa extends JPanel implements MouseMotionListener, MouseListener{
                g.drawOval(x-5,y-5,diametro,diametro);
                g.setColor(Color.BLACK);
                
-               /*//MUESTRA COORDENADAS
+
+               //MUESTRA COORDENADAS               
                Font fuente = new Font("Courier New",Font.BOLD,30);
                g.setFont(fuente);               
-               g.drawString(texto, 10, 590);*/
-
+               g.drawString(texto, 10, 590);
+            
+               
             // Dibujar línea punteada horizontal
                Graphics2D g2d = (Graphics2D) g.create();
                Stroke dashedStroke = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{2}, 0);
@@ -241,6 +244,8 @@ public class Mapa extends JPanel implements MouseMotionListener, MouseListener{
                 g2d.setStroke(dashedStroke);
                 g2d.drawLine(x, 0, x, this.getHeight());
                 g2d.dispose();  
+            
+            
     }
 
 

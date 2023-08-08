@@ -20,14 +20,19 @@ import Mapa.RoadLink;
 import Mapa.RoadPoint;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.plaf.basic.BasicTabbedPaneUI;
 
 
@@ -56,12 +61,18 @@ public class MapaPanel extends javax.swing.JPanel {
     
     public MapaPanel() {
         initComponents();
-                
+
         iniciarHashmap();
         iniciarCombobox();
-        aulaNuevoP.setBackground(new Color(255, 255, 255, 100));
     }
 
+    public void setImagenLabel(JLabel nombreLabel, String ruta){
+        ImageIcon imagen = new ImageIcon(getClass().getResource(ruta));
+        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(nombreLabel.getWidth(), nombreLabel.getHeight(), Image.SCALE_DEFAULT));
+        nombreLabel.setIcon(icono);
+        this.repaint();
+    }
+    
     private void iniciarHashmap(){
         for(Vertex<RoadPoint> rp :MapGraph.getRoadPoints()){
             RoadPoint p = rp.getElement();
@@ -108,9 +119,98 @@ public class MapaPanel extends javax.swing.JPanel {
         NivelLabel = new javax.swing.JLabel();
         fotosPanel = new javax.swing.JTabbedPane();
         jPanelPiso1 = new Mapa(this.paths[0],Piso.PRIMER_PISO);
-        aulaNuevoP = new javax.swing.JPanel();
+        aulaNuevo1 = new javax.swing.JLabel();
+        p_aulaNuevo2 = new javax.swing.JPanel();
+        aulaNuevo2 = new javax.swing.JLabel();
+        p_banio1 = new javax.swing.JPanel();
+        banio1 = new javax.swing.JLabel();
+        p_auditorio = new javax.swing.JPanel();
+        auditorio = new javax.swing.JLabel();
+        p_banio2 = new javax.swing.JPanel();
+        banio2 = new javax.swing.JLabel();
+        p_losaDeportiva = new javax.swing.JPanel();
+        losaDeportiva = new javax.swing.JLabel();
+        p_unmsm = new javax.swing.JPanel();
+        unmsm = new javax.swing.JLabel();
+        p_direccion_cc = new javax.swing.JPanel();
+        direccion_cc = new javax.swing.JLabel();
+        p_cerseu = new javax.swing.JPanel();
+        cerseu = new javax.swing.JLabel();
+        p_dga = new javax.swing.JPanel();
+        dga = new javax.swing.JLabel();
+        p_economia = new javax.swing.JPanel();
+        economia = new javax.swing.JLabel();
+        p_moduloAtencionDocente = new javax.swing.JPanel();
+        moduloAtencionDocente = new javax.swing.JLabel();
+        p_vestidores = new javax.swing.JPanel();
+        vestidores = new javax.swing.JLabel();
+        p_aulaCodigo1001 = new javax.swing.JPanel();
+        aulaCodigo1001 = new javax.swing.JLabel();
+        p_capilla = new javax.swing.JPanel();
+        capilla = new javax.swing.JLabel();
+        p_aulaCodigo1002 = new javax.swing.JPanel();
+        aulaCodigo1002 = new javax.swing.JLabel();
+        p_quiosco = new javax.swing.JPanel();
+        quiosco = new javax.swing.JLabel();
+        p_puerta2 = new javax.swing.JPanel();
         jPanelPiso2 = new Mapa(this.paths[1],Piso.SEGUNDO_PISO);
+        p_banio5 = new javax.swing.JPanel();
+        banio5 = new javax.swing.JLabel();
+        p_comedor = new javax.swing.JPanel();
+        comedor = new javax.swing.JLabel();
+        p_decanato = new javax.swing.JPanel();
+        decanato = new javax.swing.JLabel();
+        p_aulaCodigo2001 = new javax.swing.JPanel();
+        aulaCodigo2001 = new javax.swing.JLabel();
+        aulaNuevo4 = new javax.swing.JLabel();
+        p_laboratorios = new javax.swing.JPanel();
+        laboratorios = new javax.swing.JLabel();
+        p_banio6 = new javax.swing.JPanel();
+        banio6 = new javax.swing.JLabel();
+        p_microDataCenter = new javax.swing.JPanel();
+        microDataCenter = new javax.swing.JLabel();
+        p_laboratorio = new javax.swing.JPanel();
+        laboratorio = new javax.swing.JLabel();
+        p_aulaMagna = new javax.swing.JPanel();
+        aulaMagna = new javax.swing.JLabel();
+        p_aulaCodigo2002 = new javax.swing.JPanel();
+        aulaCodigo2002 = new javax.swing.JLabel();
+        p_tercio = new javax.swing.JPanel();
+        tercio = new javax.swing.JLabel();
+        p_aulaCodigo2003 = new javax.swing.JPanel();
+        aulaCodigo2003 = new javax.swing.JLabel();
+        p_trofeos = new javax.swing.JPanel();
+        trofeos = new javax.swing.JLabel();
+        p_salaCatedratico = new javax.swing.JPanel();
+        salaCatedratico = new javax.swing.JLabel();
         jPanelPiso3 = new Mapa(this.paths[2],Piso.TERCER_PISO);
+        p_banio7 = new javax.swing.JPanel();
+        banio7 = new javax.swing.JLabel();
+        p_unayoeBienestar = new javax.swing.JPanel();
+        unayoeBienestar = new javax.swing.JLabel();
+        p_laboratorios1 = new javax.swing.JPanel();
+        laboratorios1 = new javax.swing.JLabel();
+        aulaMusica = new javax.swing.JLabel();
+        p_banio8 = new javax.swing.JPanel();
+        banio8 = new javax.swing.JLabel();
+        p_laboratorios2 = new javax.swing.JPanel();
+        laboratorios2 = new javax.swing.JLabel();
+        p_laboratorios3 = new javax.swing.JPanel();
+        laboratorios3 = new javax.swing.JLabel();
+        p_laboratorios4 = new javax.swing.JPanel();
+        laboratorios4 = new javax.swing.JLabel();
+        p_departamentoAcademicoSistemas = new javax.swing.JPanel();
+        departamentoAcademicoSistemas = new javax.swing.JLabel();
+        p_soporte = new javax.swing.JPanel();
+        soporte = new javax.swing.JLabel();
+        p_publicidad = new javax.swing.JPanel();
+        publicidad = new javax.swing.JLabel();
+        p_matricula = new javax.swing.JPanel();
+        matricula = new javax.swing.JLabel();
+        p_escuelaSistemas = new javax.swing.JPanel();
+        escuelaSistemas = new javax.swing.JLabel();
+        p_escuelaSoftware = new javax.swing.JPanel();
+        escuelaSoftware = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -118,37 +218,40 @@ public class MapaPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Etiquetas.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         Etiquetas.setText("Etiquetas");
         Etiquetas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EtiquetasActionPerformed(evt);
             }
         });
-        add(Etiquetas, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, -1, -1));
+        add(Etiquetas, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 70, -1, -1));
 
+        Distancias.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         Distancias.setText("Recorrido");
         Distancias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DistanciasActionPerformed(evt);
             }
         });
-        add(Distancias, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 60, -1, -1));
+        add(Distancias, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 70, -1, -1));
 
-        app_name1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        app_name1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         app_name1.setText("Ruta");
-        add(app_name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 90, -1, 40));
+        add(app_name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 110, -1, 40));
 
+        jButton1.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jButton1.setText("Mostrar Ruta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 260, 100, 50));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 270, 140, 50));
 
-        jLabel5.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Courier New", 3, 14)); // NOI18N
         jLabel5.setText("Fin:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 190, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 200, -1, -1));
 
         Nodo1Box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         Nodo1Box.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +259,7 @@ public class MapaPanel extends javax.swing.JPanel {
                 Nodo1BoxActionPerformed(evt);
             }
         });
-        add(Nodo1Box, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 160, 120, -1));
+        add(Nodo1Box, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 170, 120, -1));
 
         Nodo2Box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         Nodo2Box.addActionListener(new java.awt.event.ActionListener() {
@@ -164,107 +267,1561 @@ public class MapaPanel extends javax.swing.JPanel {
                 Nodo2BoxActionPerformed(evt);
             }
         });
-        add(Nodo2Box, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 210, 120, -1));
+        add(Nodo2Box, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 220, 120, -1));
 
-        app_name3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        app_name3.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         app_name3.setText("MAPA");
-        add(app_name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 20, -1, 40));
+        add(app_name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 30, -1, 40));
 
-        NivelLabel.setFont(new java.awt.Font("Courier New", 0, 36)); // NOI18N
+        NivelLabel.setFont(new java.awt.Font("Courier New", 3, 36)); // NOI18N
         NivelLabel.setText("NIVEL 1");
-        add(NivelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 480, -1, -1));
+        add(NivelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 450, -1, -1));
 
         fotosPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanelPiso1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelPiso1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        aulaNuevoP.setBackground(new java.awt.Color(255, 255, 255));
-        aulaNuevoP.setForeground(new java.awt.Color(51, 51, 51));
-        aulaNuevoP.addMouseListener(new java.awt.event.MouseAdapter() {
+        p_aulaNuevo1.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaNuevo1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_aulaNuevo1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                aulaNuevoPMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                aulaNuevoPMouseExited(evt);
+                p_aulaNuevo1MouseEntered(evt);
             }
         });
 
-        javax.swing.GroupLayout aulaNuevoPLayout = new javax.swing.GroupLayout(aulaNuevoP);
-        aulaNuevoP.setLayout(aulaNuevoPLayout);
-        aulaNuevoPLayout.setHorizontalGroup(
-            aulaNuevoPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 102, Short.MAX_VALUE)
+        aulaNuevo1.setBackground(new java.awt.Color(255, 255, 255));
+        aulaNuevo1.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaNuevo1.setText("AULA NUEVO PABELLÓN");
+        aulaNuevo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aulaNuevo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaNuevo1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaNuevo1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaNuevo1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaNuevo1Layout = new javax.swing.GroupLayout(p_aulaNuevo1);
+        p_aulaNuevo1.setLayout(p_aulaNuevo1Layout);
+        p_aulaNuevo1Layout.setHorizontalGroup(
+            p_aulaNuevo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_aulaNuevo1Layout.createSequentialGroup()
+                .addComponent(aulaNuevo1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        aulaNuevoPLayout.setVerticalGroup(
-            aulaNuevoPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+        p_aulaNuevo1Layout.setVerticalGroup(
+            p_aulaNuevo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaNuevo1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanelPiso1Layout = new javax.swing.GroupLayout(jPanelPiso1);
-        jPanelPiso1.setLayout(jPanelPiso1Layout);
-        jPanelPiso1Layout.setHorizontalGroup(
-            jPanelPiso1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPiso1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(aulaNuevoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(712, Short.MAX_VALUE))
+        jPanelPiso1.add(p_aulaNuevo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 110, 40));
+
+        p_aulaNuevo2.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaNuevo2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        aulaNuevo2.setBackground(new java.awt.Color(204, 204, 204));
+        aulaNuevo2.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaNuevo2.setText("                                 AULA NUEVO PABELLÓN");
+        aulaNuevo2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aulaNuevo2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaNuevo2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaNuevo2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaNuevo2MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaNuevo2Layout = new javax.swing.GroupLayout(p_aulaNuevo2);
+        p_aulaNuevo2.setLayout(p_aulaNuevo2Layout);
+        p_aulaNuevo2Layout.setHorizontalGroup(
+            p_aulaNuevo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaNuevo2, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
         );
-        jPanelPiso1Layout.setVerticalGroup(
-            jPanelPiso1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPiso1Layout.createSequentialGroup()
-                .addComponent(aulaNuevoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 562, Short.MAX_VALUE))
+        p_aulaNuevo2Layout.setVerticalGroup(
+            p_aulaNuevo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaNuevo2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
+
+        jPanelPiso1.add(p_aulaNuevo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 340, 40));
+
+        p_banio1.setBackground(new java.awt.Color(255, 255, 255));
+        p_banio1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        banio1.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        banio1.setText("      SSHH");
+        banio1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        banio1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                banio1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                banio1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                banio1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_banio1Layout = new javax.swing.GroupLayout(p_banio1);
+        p_banio1.setLayout(p_banio1Layout);
+        p_banio1Layout.setHorizontalGroup(
+            p_banio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+        p_banio1Layout.setVerticalGroup(
+            p_banio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_banio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 70, 70));
+
+        p_auditorio.setBackground(new java.awt.Color(255, 255, 255));
+        p_auditorio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        auditorio.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        auditorio.setText("           AUDITORIO");
+        auditorio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        auditorio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                auditorioMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                auditorioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                auditorioMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_auditorioLayout = new javax.swing.GroupLayout(p_auditorio);
+        p_auditorio.setLayout(p_auditorioLayout);
+        p_auditorioLayout.setHorizontalGroup(
+            p_auditorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(auditorio, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+        );
+        p_auditorioLayout.setVerticalGroup(
+            p_auditorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(auditorio, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_auditorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 140, 50));
+
+        p_banio2.setBackground(new java.awt.Color(255, 255, 255));
+        p_banio2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        banio2.setBackground(new java.awt.Color(187, 187, 187));
+        banio2.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        banio2.setText(" SSHH");
+        banio2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        banio2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                banio2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                banio2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                banio2MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_banio2Layout = new javax.swing.GroupLayout(p_banio2);
+        p_banio2.setLayout(p_banio2Layout);
+        p_banio2Layout.setHorizontalGroup(
+            p_banio2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio2, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+        );
+        p_banio2Layout.setVerticalGroup(
+            p_banio2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio2, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_banio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 50, 30));
+
+        p_losaDeportiva.setBackground(new java.awt.Color(255, 255, 255));
+        p_losaDeportiva.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        losaDeportiva.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        losaDeportiva.setText("                         LOSA DEPORTIVA");
+        losaDeportiva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        losaDeportiva.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                losaDeportivaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                losaDeportivaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                losaDeportivaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_losaDeportivaLayout = new javax.swing.GroupLayout(p_losaDeportiva);
+        p_losaDeportiva.setLayout(p_losaDeportivaLayout);
+        p_losaDeportivaLayout.setHorizontalGroup(
+            p_losaDeportivaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(losaDeportiva, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+        );
+        p_losaDeportivaLayout.setVerticalGroup(
+            p_losaDeportivaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(losaDeportiva, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_losaDeportiva, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 230, 130));
+
+        p_unmsm.setBackground(new java.awt.Color(255, 255, 255));
+        p_unmsm.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        unmsm.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        unmsm.setText("    UNMSM");
+        unmsm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        unmsm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                unmsmMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                unmsmMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                unmsmMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_unmsmLayout = new javax.swing.GroupLayout(p_unmsm);
+        p_unmsm.setLayout(p_unmsmLayout);
+        p_unmsmLayout.setHorizontalGroup(
+            p_unmsmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(unmsm, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+        );
+        p_unmsmLayout.setVerticalGroup(
+            p_unmsmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(unmsm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_unmsm, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, 30));
+
+        p_direccion_cc.setBackground(new java.awt.Color(255, 255, 255));
+        p_direccion_cc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        direccion_cc.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        direccion_cc.setText("DIRECCION DE ESCUELA DE CC");
+        direccion_cc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        direccion_cc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                direccion_ccMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                direccion_ccMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                direccion_ccMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_direccion_ccLayout = new javax.swing.GroupLayout(p_direccion_cc);
+        p_direccion_cc.setLayout(p_direccion_ccLayout);
+        p_direccion_ccLayout.setHorizontalGroup(
+            p_direccion_ccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_direccion_ccLayout.createSequentialGroup()
+                .addComponent(direccion_cc, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_direccion_ccLayout.setVerticalGroup(
+            p_direccion_ccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(direccion_cc, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_direccion_cc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 100, 40));
+
+        p_cerseu.setBackground(new java.awt.Color(255, 255, 255));
+        p_cerseu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        cerseu.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        cerseu.setText("       CERSEU");
+        cerseu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cerseu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cerseuMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cerseuMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cerseuMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_cerseuLayout = new javax.swing.GroupLayout(p_cerseu);
+        p_cerseu.setLayout(p_cerseuLayout);
+        p_cerseuLayout.setHorizontalGroup(
+            p_cerseuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cerseu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+        );
+        p_cerseuLayout.setVerticalGroup(
+            p_cerseuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_cerseuLayout.createSequentialGroup()
+                .addComponent(cerseu, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanelPiso1.add(p_cerseu, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, 90, 20));
+
+        p_dga.setBackground(new java.awt.Color(255, 255, 255));
+        p_dga.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        dga.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        dga.setText("      DGA");
+        dga.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dga.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dgaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                dgaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                dgaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_dgaLayout = new javax.swing.GroupLayout(p_dga);
+        p_dga.setLayout(p_dgaLayout);
+        p_dgaLayout.setHorizontalGroup(
+            p_dgaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(dga, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+        );
+        p_dgaLayout.setVerticalGroup(
+            p_dgaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(dga, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_dga, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 60, 30));
+
+        p_economia.setBackground(new java.awt.Color(255, 255, 255));
+        p_economia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        economia.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        economia.setText(" ECONOMÍA");
+        economia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        economia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                economiaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                economiaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                economiaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_economiaLayout = new javax.swing.GroupLayout(p_economia);
+        p_economia.setLayout(p_economiaLayout);
+        p_economiaLayout.setHorizontalGroup(
+            p_economiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_economiaLayout.createSequentialGroup()
+                .addComponent(economia)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_economiaLayout.setVerticalGroup(
+            p_economiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_economiaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(economia))
+        );
+
+        jPanelPiso1.add(p_economia, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 70, -1));
+
+        p_moduloAtencionDocente.setBackground(new java.awt.Color(255, 255, 255));
+        p_moduloAtencionDocente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        moduloAtencionDocente.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        moduloAtencionDocente.setText("MODULO ATENCION DOCENTE");
+        moduloAtencionDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        moduloAtencionDocente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                moduloAtencionDocenteMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                moduloAtencionDocenteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                moduloAtencionDocenteMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_moduloAtencionDocenteLayout = new javax.swing.GroupLayout(p_moduloAtencionDocente);
+        p_moduloAtencionDocente.setLayout(p_moduloAtencionDocenteLayout);
+        p_moduloAtencionDocenteLayout.setHorizontalGroup(
+            p_moduloAtencionDocenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_moduloAtencionDocenteLayout.createSequentialGroup()
+                .addComponent(moduloAtencionDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_moduloAtencionDocenteLayout.setVerticalGroup(
+            p_moduloAtencionDocenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_moduloAtencionDocenteLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(moduloAtencionDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanelPiso1.add(p_moduloAtencionDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 540, 40, 30));
+
+        p_vestidores.setBackground(new java.awt.Color(255, 255, 255));
+        p_vestidores.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        vestidores.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        vestidores.setText("  VESTIDORES");
+        vestidores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        vestidores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                vestidoresMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                vestidoresMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                vestidoresMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_vestidoresLayout = new javax.swing.GroupLayout(p_vestidores);
+        p_vestidores.setLayout(p_vestidoresLayout);
+        p_vestidoresLayout.setHorizontalGroup(
+            p_vestidoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(vestidores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        p_vestidoresLayout.setVerticalGroup(
+            p_vestidoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(vestidores, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_vestidores, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 90, 40));
+
+        p_aulaCodigo1001.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaCodigo1001.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        aulaCodigo1001.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaCodigo1001.setText("                                        AULA CON CÓDIGO 100 - ANTIGUO PABELLÓN");
+        aulaCodigo1001.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aulaCodigo1001.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaCodigo1001MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaCodigo1001MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaCodigo1001MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaCodigo1001Layout = new javax.swing.GroupLayout(p_aulaCodigo1001);
+        p_aulaCodigo1001.setLayout(p_aulaCodigo1001Layout);
+        p_aulaCodigo1001Layout.setHorizontalGroup(
+            p_aulaCodigo1001Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaCodigo1001, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
+        );
+        p_aulaCodigo1001Layout.setVerticalGroup(
+            p_aulaCodigo1001Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaCodigo1001, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_aulaCodigo1001, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 500, 40));
+
+        p_capilla.setBackground(new java.awt.Color(255, 255, 255));
+        p_capilla.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        capilla.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        capilla.setText("   CAPILLA");
+        capilla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        capilla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                capillaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                capillaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                capillaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_capillaLayout = new javax.swing.GroupLayout(p_capilla);
+        p_capilla.setLayout(p_capillaLayout);
+        p_capillaLayout.setHorizontalGroup(
+            p_capillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(capilla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        p_capillaLayout.setVerticalGroup(
+            p_capillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(capilla, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_capilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 370, 70, 40));
+
+        p_aulaCodigo1002.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaCodigo1002.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        aulaCodigo1002.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaCodigo1002.setText("              AULA CON CÓDIGO 100 - ANTIGUO PABELLÓN");
+        aulaCodigo1002.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aulaCodigo1002.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaCodigo1002MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaCodigo1002MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaCodigo1002MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaCodigo1002Layout = new javax.swing.GroupLayout(p_aulaCodigo1002);
+        p_aulaCodigo1002.setLayout(p_aulaCodigo1002Layout);
+        p_aulaCodigo1002Layout.setHorizontalGroup(
+            p_aulaCodigo1002Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaCodigo1002, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+        );
+        p_aulaCodigo1002Layout.setVerticalGroup(
+            p_aulaCodigo1002Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaCodigo1002, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_aulaCodigo1002, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 340, 30));
+
+        p_quiosco.setBackground(new java.awt.Color(255, 255, 255));
+        p_quiosco.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        quiosco.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        quiosco.setText("  QUIOSCO");
+        quiosco.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        quiosco.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quioscoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                quioscoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                quioscoMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_quioscoLayout = new javax.swing.GroupLayout(p_quiosco);
+        p_quiosco.setLayout(p_quioscoLayout);
+        p_quioscoLayout.setHorizontalGroup(
+            p_quioscoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(quiosco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        p_quioscoLayout.setVerticalGroup(
+            p_quioscoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(quiosco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_quiosco, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 530, 70, 20));
+
+        p_puerta2.setBackground(new java.awt.Color(255, 255, 255));
+        p_puerta2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        javax.swing.GroupLayout p_puerta2Layout = new javax.swing.GroupLayout(p_puerta2);
+        p_puerta2.setLayout(p_puerta2Layout);
+        p_puerta2Layout.setHorizontalGroup(
+            p_puerta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+        p_puerta2Layout.setVerticalGroup(
+            p_puerta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 16, Short.MAX_VALUE)
+        );
+
+        jPanelPiso1.add(p_puerta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 40, 20));
 
         fotosPanel.addTab("", jPanelPiso1);
         jPanelPiso1.getAccessibleContext().setAccessibleName("");
 
         jPanelPiso2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelPiso2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanelPiso2Layout = new javax.swing.GroupLayout(jPanelPiso2);
-        jPanelPiso2.setLayout(jPanelPiso2Layout);
-        jPanelPiso2Layout.setHorizontalGroup(
-            jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 880, Short.MAX_VALUE)
+        p_banio5.setBackground(new java.awt.Color(255, 255, 255));
+        p_banio5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_banio5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        banio5.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        banio5.setText("      SSHH");
+        banio5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                banio5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                banio5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                banio5MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_banio5Layout = new javax.swing.GroupLayout(p_banio5);
+        p_banio5.setLayout(p_banio5Layout);
+        p_banio5Layout.setHorizontalGroup(
+            p_banio5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
         );
-        jPanelPiso2Layout.setVerticalGroup(
-            jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 599, Short.MAX_VALUE)
+        p_banio5Layout.setVerticalGroup(
+            p_banio5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
         );
+
+        jPanelPiso2.add(p_banio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 70, 70));
+
+        p_comedor.setBackground(new java.awt.Color(255, 255, 255));
+        p_comedor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_comedor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        comedor.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        comedor.setText("           COMEDOR");
+        comedor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comedorMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                comedorMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                comedorMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_comedorLayout = new javax.swing.GroupLayout(p_comedor);
+        p_comedor.setLayout(p_comedorLayout);
+        p_comedorLayout.setHorizontalGroup(
+            p_comedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(comedor, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+        );
+        p_comedorLayout.setVerticalGroup(
+            p_comedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(comedor, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_comedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 140, 50));
+
+        p_decanato.setBackground(new java.awt.Color(255, 255, 255));
+        p_decanato.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_decanato.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        decanato.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        decanato.setText("    DECANATO");
+        decanato.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                decanatoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                decanatoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                decanatoMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_decanatoLayout = new javax.swing.GroupLayout(p_decanato);
+        p_decanato.setLayout(p_decanatoLayout);
+        p_decanatoLayout.setHorizontalGroup(
+            p_decanatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(decanato, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+        );
+        p_decanatoLayout.setVerticalGroup(
+            p_decanatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(decanato, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_decanato, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 110, 40));
+
+        p_aulaCodigo2001.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaCodigo2001.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_aulaCodigo2001.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        aulaCodigo2001.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaCodigo2001.setText("                                   AULA CON CÓDIGO 200");
+        aulaCodigo2001.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaCodigo2001MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaCodigo2001MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaCodigo2001MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaCodigo2001Layout = new javax.swing.GroupLayout(p_aulaCodigo2001);
+        p_aulaCodigo2001.setLayout(p_aulaCodigo2001Layout);
+        p_aulaCodigo2001Layout.setHorizontalGroup(
+            p_aulaCodigo2001Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaCodigo2001, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+        );
+        p_aulaCodigo2001Layout.setVerticalGroup(
+            p_aulaCodigo2001Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaCodigo2001, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_aulaCodigo2001, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 340, 30));
+
+        p_aulaNuevo4.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaNuevo4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_aulaNuevo4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        aulaNuevo4.setBackground(new java.awt.Color(255, 255, 255));
+        aulaNuevo4.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaNuevo4.setText("AULA NUEVO PABELLÓN");
+        aulaNuevo4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaNuevo4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaNuevo4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaNuevo4MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaNuevo4Layout = new javax.swing.GroupLayout(p_aulaNuevo4);
+        p_aulaNuevo4.setLayout(p_aulaNuevo4Layout);
+        p_aulaNuevo4Layout.setHorizontalGroup(
+            p_aulaNuevo4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_aulaNuevo4Layout.createSequentialGroup()
+                .addComponent(aulaNuevo4, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_aulaNuevo4Layout.setVerticalGroup(
+            p_aulaNuevo4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaNuevo4, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_aulaNuevo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 110, 40));
+
+        p_laboratorios.setBackground(new java.awt.Color(255, 255, 255));
+        p_laboratorios.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_laboratorios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        laboratorios.setBackground(new java.awt.Color(204, 204, 204));
+        laboratorios.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        laboratorios.setText("                                     LABORATORIOS");
+        laboratorios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                laboratoriosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                laboratoriosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                laboratoriosMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_laboratoriosLayout = new javax.swing.GroupLayout(p_laboratorios);
+        p_laboratorios.setLayout(p_laboratoriosLayout);
+        p_laboratoriosLayout.setHorizontalGroup(
+            p_laboratoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorios, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+        );
+        p_laboratoriosLayout.setVerticalGroup(
+            p_laboratoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_laboratorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 320, 40));
+
+        p_banio6.setBackground(new java.awt.Color(255, 255, 255));
+        p_banio6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_banio6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        banio6.setBackground(new java.awt.Color(187, 187, 187));
+        banio6.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        banio6.setText("    SSHH");
+        banio6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                banio6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                banio6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                banio6MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_banio6Layout = new javax.swing.GroupLayout(p_banio6);
+        p_banio6.setLayout(p_banio6Layout);
+        p_banio6Layout.setHorizontalGroup(
+            p_banio6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio6, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+        );
+        p_banio6Layout.setVerticalGroup(
+            p_banio6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio6, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_banio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 60, 40));
+
+        p_microDataCenter.setBackground(new java.awt.Color(255, 255, 255));
+        p_microDataCenter.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_microDataCenter.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        microDataCenter.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        microDataCenter.setText("        MICRO DATA CENTER");
+        microDataCenter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                microDataCenterMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                microDataCenterMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                microDataCenterMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_microDataCenterLayout = new javax.swing.GroupLayout(p_microDataCenter);
+        p_microDataCenter.setLayout(p_microDataCenterLayout);
+        p_microDataCenterLayout.setHorizontalGroup(
+            p_microDataCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(microDataCenter, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+        );
+        p_microDataCenterLayout.setVerticalGroup(
+            p_microDataCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(microDataCenter, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_microDataCenter, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 180, 40));
+
+        p_laboratorio.setBackground(new java.awt.Color(255, 255, 255));
+        p_laboratorio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_laboratorio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        laboratorio.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        laboratorio.setText("  LABORATORIO");
+        laboratorio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                laboratorioMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                laboratorioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                laboratorioMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_laboratorioLayout = new javax.swing.GroupLayout(p_laboratorio);
+        p_laboratorio.setLayout(p_laboratorioLayout);
+        p_laboratorioLayout.setHorizontalGroup(
+            p_laboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        p_laboratorioLayout.setVerticalGroup(
+            p_laboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 480, 110, 20));
+
+        p_aulaMagna.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaMagna.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_aulaMagna.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        aulaMagna.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaMagna.setText("AULA MAGNA");
+        aulaMagna.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaMagnaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaMagnaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaMagnaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaMagnaLayout = new javax.swing.GroupLayout(p_aulaMagna);
+        p_aulaMagna.setLayout(p_aulaMagnaLayout);
+        p_aulaMagnaLayout.setHorizontalGroup(
+            p_aulaMagnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_aulaMagnaLayout.createSequentialGroup()
+                .addComponent(aulaMagna, javax.swing.GroupLayout.PREFERRED_SIZE, 70, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        p_aulaMagnaLayout.setVerticalGroup(
+            p_aulaMagnaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaMagna, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_aulaMagna, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 410, 70, 40));
+
+        p_aulaCodigo2002.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaCodigo2002.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_aulaCodigo2002.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        aulaCodigo2002.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaCodigo2002.setText("AULAS CON CÓDIGO 200");
+        aulaCodigo2002.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaCodigo2002MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaCodigo2002MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaCodigo2002MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaCodigo2002Layout = new javax.swing.GroupLayout(p_aulaCodigo2002);
+        p_aulaCodigo2002.setLayout(p_aulaCodigo2002Layout);
+        p_aulaCodigo2002Layout.setHorizontalGroup(
+            p_aulaCodigo2002Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_aulaCodigo2002Layout.createSequentialGroup()
+                .addComponent(aulaCodigo2002, javax.swing.GroupLayout.PREFERRED_SIZE, 110, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        p_aulaCodigo2002Layout.setVerticalGroup(
+            p_aulaCodigo2002Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaCodigo2002, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_aulaCodigo2002, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 110, 40));
+
+        p_tercio.setBackground(new java.awt.Color(255, 255, 255));
+        p_tercio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_tercio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        tercio.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        tercio.setText("TERCIO ESTUDIANTIL FISI");
+        tercio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tercioMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tercioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tercioMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_tercioLayout = new javax.swing.GroupLayout(p_tercio);
+        p_tercio.setLayout(p_tercioLayout);
+        p_tercioLayout.setHorizontalGroup(
+            p_tercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_tercioLayout.createSequentialGroup()
+                .addComponent(tercio, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_tercioLayout.setVerticalGroup(
+            p_tercioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tercio, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_tercio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 80, 90));
+
+        p_aulaCodigo2003.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaCodigo2003.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_aulaCodigo2003.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        aulaCodigo2003.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaCodigo2003.setText("AULAS CON CÓDIGO 200");
+        aulaCodigo2003.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaCodigo2003MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaCodigo2003MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaCodigo2003MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaCodigo2003Layout = new javax.swing.GroupLayout(p_aulaCodigo2003);
+        p_aulaCodigo2003.setLayout(p_aulaCodigo2003Layout);
+        p_aulaCodigo2003Layout.setHorizontalGroup(
+            p_aulaCodigo2003Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_aulaCodigo2003Layout.createSequentialGroup()
+                .addComponent(aulaCodigo2003, javax.swing.GroupLayout.PREFERRED_SIZE, 133, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        p_aulaCodigo2003Layout.setVerticalGroup(
+            p_aulaCodigo2003Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aulaCodigo2003, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_aulaCodigo2003, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, 130, 40));
+
+        p_trofeos.setBackground(new java.awt.Color(255, 255, 255));
+        p_trofeos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_trofeos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        trofeos.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        trofeos.setText("  TROFEOS");
+        trofeos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                trofeosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                trofeosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                trofeosMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_trofeosLayout = new javax.swing.GroupLayout(p_trofeos);
+        p_trofeos.setLayout(p_trofeosLayout);
+        p_trofeosLayout.setHorizontalGroup(
+            p_trofeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(trofeos, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+        p_trofeosLayout.setVerticalGroup(
+            p_trofeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(trofeos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_trofeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 456, 70, 20));
+
+        p_salaCatedratico.setBackground(new java.awt.Color(255, 255, 255));
+        p_salaCatedratico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_salaCatedratico.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        salaCatedratico.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        salaCatedratico.setText("SALA DE CATEDRÁTICOS");
+        salaCatedratico.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salaCatedraticoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                salaCatedraticoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salaCatedraticoMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_salaCatedraticoLayout = new javax.swing.GroupLayout(p_salaCatedratico);
+        p_salaCatedratico.setLayout(p_salaCatedraticoLayout);
+        p_salaCatedraticoLayout.setHorizontalGroup(
+            p_salaCatedraticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_salaCatedraticoLayout.createSequentialGroup()
+                .addComponent(salaCatedratico, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_salaCatedraticoLayout.setVerticalGroup(
+            p_salaCatedraticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(salaCatedratico, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+        );
+
+        jPanelPiso2.add(p_salaCatedratico, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 80, 30));
 
         fotosPanel.addTab("", jPanelPiso2);
 
         jPanelPiso3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelPiso3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanelPiso3Layout = new javax.swing.GroupLayout(jPanelPiso3);
-        jPanelPiso3.setLayout(jPanelPiso3Layout);
-        jPanelPiso3Layout.setHorizontalGroup(
-            jPanelPiso3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 880, Short.MAX_VALUE)
+        p_banio7.setBackground(new java.awt.Color(255, 255, 255));
+        p_banio7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_banio7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        p_banio7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                p_banio7MouseEntered(evt);
+            }
+        });
+
+        banio7.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        banio7.setText("      SSHH");
+        banio7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                banio7MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                banio7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                banio7MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_banio7Layout = new javax.swing.GroupLayout(p_banio7);
+        p_banio7.setLayout(p_banio7Layout);
+        p_banio7Layout.setHorizontalGroup(
+            p_banio7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
         );
-        jPanelPiso3Layout.setVerticalGroup(
-            jPanelPiso3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 599, Short.MAX_VALUE)
+        p_banio7Layout.setVerticalGroup(
+            p_banio7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
         );
+
+        jPanelPiso3.add(p_banio7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 70, 70));
+
+        p_unayoeBienestar.setBackground(new java.awt.Color(255, 255, 255));
+        p_unayoeBienestar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_unayoeBienestar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        unayoeBienestar.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        unayoeBienestar.setText(" UNAYOE Y BIENESTAR");
+        unayoeBienestar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                unayoeBienestarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                unayoeBienestarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                unayoeBienestarMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_unayoeBienestarLayout = new javax.swing.GroupLayout(p_unayoeBienestar);
+        p_unayoeBienestar.setLayout(p_unayoeBienestarLayout);
+        p_unayoeBienestarLayout.setHorizontalGroup(
+            p_unayoeBienestarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(unayoeBienestar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        p_unayoeBienestarLayout.setVerticalGroup(
+            p_unayoeBienestarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(unayoeBienestar, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+        );
+
+        jPanelPiso3.add(p_unayoeBienestar, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 550, 130, 30));
+
+        p_laboratorios1.setBackground(new java.awt.Color(255, 255, 255));
+        p_laboratorios1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_laboratorios1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        laboratorios1.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        laboratorios1.setText("                                       LABORATORIOS");
+        laboratorios1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                laboratorios1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                laboratorios1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                laboratorios1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_laboratorios1Layout = new javax.swing.GroupLayout(p_laboratorios1);
+        p_laboratorios1.setLayout(p_laboratorios1Layout);
+        p_laboratorios1Layout.setHorizontalGroup(
+            p_laboratorios1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorios1, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+        );
+        p_laboratorios1Layout.setVerticalGroup(
+            p_laboratorios1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorios1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+        );
+
+        jPanelPiso3.add(p_laboratorios1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 340, 30));
+
+        p_aulaMusica.setBackground(new java.awt.Color(255, 255, 255));
+        p_aulaMusica.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_aulaMusica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        aulaMusica.setBackground(new java.awt.Color(255, 255, 255));
+        aulaMusica.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        aulaMusica.setText("AULA DE MÚSICA");
+        aulaMusica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aulaMusicaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                aulaMusicaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                aulaMusicaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_aulaMusicaLayout = new javax.swing.GroupLayout(p_aulaMusica);
+        p_aulaMusica.setLayout(p_aulaMusicaLayout);
+        p_aulaMusicaLayout.setHorizontalGroup(
+            p_aulaMusicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_aulaMusicaLayout.createSequentialGroup()
+                .addComponent(aulaMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_aulaMusicaLayout.setVerticalGroup(
+            p_aulaMusicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_aulaMusicaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(aulaMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanelPiso3.add(p_aulaMusica, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 90, 40));
+
+        p_banio8.setBackground(new java.awt.Color(255, 255, 255));
+        p_banio8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_banio8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        banio8.setBackground(new java.awt.Color(187, 187, 187));
+        banio8.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        banio8.setText("      SSHH");
+        banio8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                banio8MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                banio8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                banio8MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_banio8Layout = new javax.swing.GroupLayout(p_banio8);
+        p_banio8.setLayout(p_banio8Layout);
+        p_banio8Layout.setHorizontalGroup(
+            p_banio8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(banio8, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+        p_banio8Layout.setVerticalGroup(
+            p_banio8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_banio8Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(banio8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanelPiso3.add(p_banio8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 70, 40));
+
+        p_laboratorios2.setBackground(new java.awt.Color(255, 255, 255));
+        p_laboratorios2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_laboratorios2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        laboratorios2.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        laboratorios2.setText("                         LABORATORIOS ");
+        laboratorios2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                laboratorios2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                laboratorios2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                laboratorios2MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_laboratorios2Layout = new javax.swing.GroupLayout(p_laboratorios2);
+        p_laboratorios2.setLayout(p_laboratorios2Layout);
+        p_laboratorios2Layout.setHorizontalGroup(
+            p_laboratorios2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorios2, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
+        );
+        p_laboratorios2Layout.setVerticalGroup(
+            p_laboratorios2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorios2, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso3.add(p_laboratorios2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 260, 40));
+
+        p_laboratorios3.setBackground(new java.awt.Color(255, 255, 255));
+        p_laboratorios3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_laboratorios3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        laboratorios3.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        laboratorios3.setText("LABORATORIO");
+        laboratorios3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                laboratorios3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                laboratorios3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                laboratorios3MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_laboratorios3Layout = new javax.swing.GroupLayout(p_laboratorios3);
+        p_laboratorios3.setLayout(p_laboratorios3Layout);
+        p_laboratorios3Layout.setHorizontalGroup(
+            p_laboratorios3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(laboratorios3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, Short.MAX_VALUE)
+        );
+        p_laboratorios3Layout.setVerticalGroup(
+            p_laboratorios3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_laboratorios3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(laboratorios3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanelPiso3.add(p_laboratorios3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 410, 80, 40));
+
+        p_laboratorios4.setBackground(new java.awt.Color(255, 255, 255));
+        p_laboratorios4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_laboratorios4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        laboratorios4.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        laboratorios4.setText("LABORATORIO");
+        laboratorios4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                laboratorios4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                laboratorios4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                laboratorios4MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_laboratorios4Layout = new javax.swing.GroupLayout(p_laboratorios4);
+        p_laboratorios4.setLayout(p_laboratorios4Layout);
+        p_laboratorios4Layout.setHorizontalGroup(
+            p_laboratorios4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_laboratorios4Layout.createSequentialGroup()
+                .addComponent(laboratorios4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_laboratorios4Layout.setVerticalGroup(
+            p_laboratorios4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_laboratorios4Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(laboratorios4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanelPiso3.add(p_laboratorios4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 80, 40));
+
+        p_departamentoAcademicoSistemas.setBackground(new java.awt.Color(255, 255, 255));
+        p_departamentoAcademicoSistemas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_departamentoAcademicoSistemas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        departamentoAcademicoSistemas.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        departamentoAcademicoSistemas.setText("DEPARTAMENTO ACADÉMICO DE SISTEMAS");
+        departamentoAcademicoSistemas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                departamentoAcademicoSistemasMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                departamentoAcademicoSistemasMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                departamentoAcademicoSistemasMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_departamentoAcademicoSistemasLayout = new javax.swing.GroupLayout(p_departamentoAcademicoSistemas);
+        p_departamentoAcademicoSistemas.setLayout(p_departamentoAcademicoSistemasLayout);
+        p_departamentoAcademicoSistemasLayout.setHorizontalGroup(
+            p_departamentoAcademicoSistemasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_departamentoAcademicoSistemasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(departamentoAcademicoSistemas, javax.swing.GroupLayout.PREFERRED_SIZE, 118, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        p_departamentoAcademicoSistemasLayout.setVerticalGroup(
+            p_departamentoAcademicoSistemasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_departamentoAcademicoSistemasLayout.createSequentialGroup()
+                .addComponent(departamentoAcademicoSistemas, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanelPiso3.add(p_departamentoAcademicoSistemas, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, 130, 40));
+
+        p_soporte.setBackground(new java.awt.Color(255, 255, 255));
+        p_soporte.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_soporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        soporte.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        soporte.setText("    SOPORTE");
+        soporte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                soporteMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                soporteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                soporteMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_soporteLayout = new javax.swing.GroupLayout(p_soporte);
+        p_soporte.setLayout(p_soporteLayout);
+        p_soporteLayout.setHorizontalGroup(
+            p_soporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(soporte, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+        );
+        p_soporteLayout.setVerticalGroup(
+            p_soporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(soporte, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        jPanelPiso3.add(p_soporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 80, 40));
+
+        p_publicidad.setBackground(new java.awt.Color(255, 255, 255));
+        p_publicidad.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_publicidad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        publicidad.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        publicidad.setText("  PUBLICIDAD");
+        publicidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                publicidadMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                publicidadMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                publicidadMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_publicidadLayout = new javax.swing.GroupLayout(p_publicidad);
+        p_publicidad.setLayout(p_publicidadLayout);
+        p_publicidadLayout.setHorizontalGroup(
+            p_publicidadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_publicidadLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(publicidad, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        p_publicidadLayout.setVerticalGroup(
+            p_publicidadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_publicidadLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(publicidad, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanelPiso3.add(p_publicidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 80, 40));
+
+        p_matricula.setBackground(new java.awt.Color(255, 255, 255));
+        p_matricula.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_matricula.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        matricula.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        matricula.setText("       MATRICULA");
+        matricula.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                matriculaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                matriculaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                matriculaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_matriculaLayout = new javax.swing.GroupLayout(p_matricula);
+        p_matricula.setLayout(p_matriculaLayout);
+        p_matriculaLayout.setHorizontalGroup(
+            p_matriculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(matricula, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+        );
+        p_matriculaLayout.setVerticalGroup(
+            p_matriculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(matricula, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+        );
+
+        jPanelPiso3.add(p_matricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 110, 30));
+
+        p_escuelaSistemas.setBackground(new java.awt.Color(255, 255, 255));
+        p_escuelaSistemas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_escuelaSistemas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        escuelaSistemas.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        escuelaSistemas.setText("DIR. ESCUELA DE SIS.");
+        escuelaSistemas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                escuelaSistemasMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                escuelaSistemasMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                escuelaSistemasMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_escuelaSistemasLayout = new javax.swing.GroupLayout(p_escuelaSistemas);
+        p_escuelaSistemas.setLayout(p_escuelaSistemasLayout);
+        p_escuelaSistemasLayout.setHorizontalGroup(
+            p_escuelaSistemasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_escuelaSistemasLayout.createSequentialGroup()
+                .addComponent(escuelaSistemas, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_escuelaSistemasLayout.setVerticalGroup(
+            p_escuelaSistemasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(escuelaSistemas, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+        );
+
+        jPanelPiso3.add(p_escuelaSistemas, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 110, 50));
+
+        p_escuelaSoftware.setBackground(new java.awt.Color(255, 255, 255));
+        p_escuelaSoftware.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        p_escuelaSoftware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        escuelaSoftware.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        escuelaSoftware.setText("DIR. ESCUELA DE SOFT.");
+        escuelaSoftware.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                escuelaSoftwareMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                escuelaSoftwareMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                escuelaSoftwareMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p_escuelaSoftwareLayout = new javax.swing.GroupLayout(p_escuelaSoftware);
+        p_escuelaSoftware.setLayout(p_escuelaSoftwareLayout);
+        p_escuelaSoftwareLayout.setHorizontalGroup(
+            p_escuelaSoftwareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_escuelaSoftwareLayout.createSequentialGroup()
+                .addComponent(escuelaSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        p_escuelaSoftwareLayout.setVerticalGroup(
+            p_escuelaSoftwareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(escuelaSoftware, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+        );
+
+        jPanelPiso3.add(p_escuelaSoftware, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, 110, 50));
 
         fotosPanel.addTab("", jPanelPiso3);
 
         add(fotosPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 880, 630));
 
-        jLabel8.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Courier New", 3, 14)); // NOI18N
         jLabel8.setText("Inicio:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 140, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 150, -1, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/down.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 530, 90, 80));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 500, 70, 60));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/up.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/1.png"))); // NOI18N
         jButton3.setToolTipText("");
         jButton3.setBorder(null);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -272,7 +1829,7 @@ public class MapaPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 390, -1, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 370, 70, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void DistanciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DistanciasActionPerformed
@@ -316,6 +1873,8 @@ public class MapaPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_Nodo2BoxActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        MapaPanel.NodosShortestPath = null;
         // TODO add your handling code here:
         try{
             Vertex a = hashMap.get((String) Nodo1Box.getSelectedItem());
@@ -349,15 +1908,572 @@ public class MapaPanel extends javax.swing.JPanel {
         this.NivelLabel.setText("NIVEL "+(pisoActual+1)); //Etiqueta        
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void aulaNuevoPMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevoPMouseEntered
-        aulaNuevoP.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_aulaNuevoPMouseEntered
+    private void p_aulaNuevo1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p_aulaNuevo1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_p_aulaNuevo1MouseEntered
 
-    private void aulaNuevoPMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevoPMouseExited
-        aulaNuevoP.setBackground(new Color(254, 254, 254));
-    }//GEN-LAST:event_aulaNuevoPMouseExited
+    private void aulaNuevo1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo1MouseEntered
+        p_aulaNuevo1.setBackground(new Color(200, 200, 200));
+    }//GEN-LAST:event_aulaNuevo1MouseEntered
 
+    private void aulaNuevo1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo1MouseExited
+        p_aulaNuevo1.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaNuevo1MouseExited
 
+    private void aulaNuevo2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo2MouseEntered
+        p_aulaNuevo2.setBackground(new Color(200, 200, 200));
+    }//GEN-LAST:event_aulaNuevo2MouseEntered
+
+    private void aulaNuevo2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo2MouseExited
+        p_aulaNuevo2.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaNuevo2MouseExited
+
+    private void banio2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio2MouseEntered
+        p_banio2.setBackground(new Color(200, 200, 200));
+    }//GEN-LAST:event_banio2MouseEntered
+
+    private void banio2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio2MouseExited
+        p_banio2.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_banio2MouseExited
+
+    private void losaDeportivaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_losaDeportivaMouseEntered
+        p_losaDeportiva.setBackground(new Color(200, 200, 200));
+    }//GEN-LAST:event_losaDeportivaMouseEntered
+
+    private void losaDeportivaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_losaDeportivaMouseExited
+        p_losaDeportiva.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_losaDeportivaMouseExited
+
+    private void auditorioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_auditorioMouseEntered
+        p_auditorio.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_auditorioMouseEntered
+
+    private void auditorioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_auditorioMouseExited
+        p_auditorio.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_auditorioMouseExited
+
+    private void banio1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio1MouseEntered
+        p_banio1.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_banio1MouseEntered
+
+    private void banio1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio1MouseExited
+        p_banio1.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_banio1MouseExited
+
+    private void unmsmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unmsmMouseEntered
+        p_unmsm.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_unmsmMouseEntered
+
+    private void unmsmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unmsmMouseExited
+        p_unmsm.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_unmsmMouseExited
+
+    private void direccion_ccMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_direccion_ccMouseEntered
+        p_direccion_cc.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_direccion_ccMouseEntered
+
+    private void direccion_ccMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_direccion_ccMouseExited
+        p_direccion_cc.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_direccion_ccMouseExited
+
+    private void dgaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dgaMouseEntered
+        p_dga.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_dgaMouseEntered
+
+    private void dgaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dgaMouseExited
+        p_dga.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_dgaMouseExited
+
+    private void economiaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_economiaMouseEntered
+        p_economia.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_economiaMouseEntered
+
+    private void economiaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_economiaMouseExited
+        p_economia.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_economiaMouseExited
+
+    private void moduloAtencionDocenteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_moduloAtencionDocenteMouseEntered
+        p_moduloAtencionDocente.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_moduloAtencionDocenteMouseEntered
+
+    private void moduloAtencionDocenteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_moduloAtencionDocenteMouseExited
+        p_moduloAtencionDocente.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_moduloAtencionDocenteMouseExited
+
+    private void aulaCodigo1002MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo1002MouseEntered
+        p_aulaCodigo1002.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_aulaCodigo1002MouseEntered
+
+    private void aulaCodigo1002MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo1002MouseExited
+        p_aulaCodigo1002.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaCodigo1002MouseExited
+
+    private void aulaCodigo1001MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo1001MouseEntered
+        p_aulaCodigo1001.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_aulaCodigo1001MouseEntered
+
+    private void aulaCodigo1001MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo1001MouseExited
+        p_aulaCodigo1001.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaCodigo1001MouseExited
+
+    private void capillaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_capillaMouseEntered
+        p_capilla.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_capillaMouseEntered
+
+    private void capillaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_capillaMouseExited
+        p_capilla.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_capillaMouseExited
+
+    private void vestidoresMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vestidoresMouseEntered
+        p_vestidores.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_vestidoresMouseEntered
+
+    private void vestidoresMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vestidoresMouseExited
+        p_vestidores.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_vestidoresMouseExited
+
+    private void quioscoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quioscoMouseEntered
+        p_quiosco.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_quioscoMouseEntered
+
+    private void quioscoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quioscoMouseExited
+        p_quiosco.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_quioscoMouseExited
+
+    private void cerseuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerseuMouseEntered
+        p_cerseu.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_cerseuMouseEntered
+
+    private void cerseuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerseuMouseExited
+        p_cerseu.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_cerseuMouseExited
+
+    private void aulaNuevo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo1MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulaNuevoPabellon2.jpg");
+    }//GEN-LAST:event_aulaNuevo1MouseClicked
+
+    private void banio5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio5MouseEntered
+        p_banio5.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_banio5MouseEntered
+
+    private void banio5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio5MouseExited
+        p_banio5.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_banio5MouseExited
+
+    private void comedorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comedorMouseEntered
+        p_comedor.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_comedorMouseEntered
+
+    private void comedorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comedorMouseExited
+        p_comedor.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_comedorMouseExited
+
+    private void decanatoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_decanatoMouseEntered
+        p_decanato.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_decanatoMouseEntered
+
+    private void decanatoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_decanatoMouseExited
+        p_decanato.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_decanatoMouseExited
+
+    private void aulaCodigo2001MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2001MouseEntered
+        p_aulaCodigo2001.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_aulaCodigo2001MouseEntered
+
+    private void aulaCodigo2001MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2001MouseExited
+        p_aulaCodigo2001.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaCodigo2001MouseExited
+
+    private void aulaNuevo4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo4MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulaNuevo4.jpg");
+    }//GEN-LAST:event_aulaNuevo4MouseClicked
+
+    private void aulaNuevo4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo4MouseEntered
+        p_aulaNuevo4.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_aulaNuevo4MouseEntered
+
+    private void aulaNuevo4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo4MouseExited
+        p_aulaNuevo4.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaNuevo4MouseExited
+
+    private void laboratoriosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratoriosMouseEntered
+        p_laboratorios.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_laboratoriosMouseEntered
+
+    private void laboratoriosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratoriosMouseExited
+        p_laboratorios.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_laboratoriosMouseExited
+
+    private void banio6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio6MouseEntered
+        p_banio6.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_banio6MouseEntered
+
+    private void banio6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio6MouseExited
+        p_banio6.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_banio6MouseExited
+
+    private void microDataCenterMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_microDataCenterMouseEntered
+        p_microDataCenter.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_microDataCenterMouseEntered
+
+    private void microDataCenterMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_microDataCenterMouseExited
+        p_microDataCenter.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_microDataCenterMouseExited
+
+    private void salaCatedraticoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salaCatedraticoMouseEntered
+        p_salaCatedratico.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_salaCatedraticoMouseEntered
+
+    private void salaCatedraticoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salaCatedraticoMouseExited
+        p_salaCatedratico.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_salaCatedraticoMouseExited
+
+    private void trofeosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_trofeosMouseEntered
+        p_trofeos.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_trofeosMouseEntered
+
+    private void trofeosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_trofeosMouseExited
+        p_trofeos.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_trofeosMouseExited
+
+    private void aulaCodigo2003MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2003MouseEntered
+        p_aulaCodigo2003.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_aulaCodigo2003MouseEntered
+
+    private void aulaCodigo2003MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2003MouseExited
+        p_aulaCodigo2003.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaCodigo2003MouseExited
+
+    private void tercioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tercioMouseEntered
+        p_tercio.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_tercioMouseEntered
+
+    private void tercioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tercioMouseExited
+        p_tercio.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_tercioMouseExited
+
+    private void aulaCodigo2002MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2002MouseEntered
+        p_aulaCodigo2002.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_aulaCodigo2002MouseEntered
+
+    private void aulaCodigo2002MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2002MouseExited
+        p_aulaCodigo2002.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaCodigo2002MouseExited
+
+    private void aulaMagnaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaMagnaMouseEntered
+        p_aulaMagna.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_aulaMagnaMouseEntered
+
+    private void aulaMagnaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaMagnaMouseExited
+        p_aulaMagna.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaMagnaMouseExited
+
+    private void laboratorioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorioMouseEntered
+        p_laboratorio.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_laboratorioMouseEntered
+
+    private void laboratorioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorioMouseExited
+        p_laboratorio.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_laboratorioMouseExited
+
+    private void publicidadMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_publicidadMouseExited
+        p_publicidad.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_publicidadMouseExited
+
+    private void publicidadMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_publicidadMouseEntered
+        p_publicidad.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_publicidadMouseEntered
+
+    private void soporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_soporteMouseExited
+        p_soporte.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_soporteMouseExited
+
+    private void soporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_soporteMouseEntered
+        p_soporte.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_soporteMouseEntered
+
+    private void departamentoAcademicoSistemasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_departamentoAcademicoSistemasMouseExited
+        p_departamentoAcademicoSistemas.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_departamentoAcademicoSistemasMouseExited
+
+    private void departamentoAcademicoSistemasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_departamentoAcademicoSistemasMouseEntered
+        p_departamentoAcademicoSistemas.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_departamentoAcademicoSistemasMouseEntered
+
+    private void laboratorios4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios4MouseExited
+        p_laboratorios4.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_laboratorios4MouseExited
+
+    private void laboratorios4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios4MouseEntered
+        p_laboratorios4.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_laboratorios4MouseEntered
+
+    private void laboratorios3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios3MouseExited
+        p_laboratorios3.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_laboratorios3MouseExited
+
+    private void laboratorios3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios3MouseEntered
+        p_laboratorios3.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_laboratorios3MouseEntered
+
+    private void laboratorios2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios2MouseExited
+        p_laboratorios2.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_laboratorios2MouseExited
+
+    private void laboratorios2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios2MouseEntered
+        p_laboratorios2.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_laboratorios2MouseEntered
+
+    private void banio8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio8MouseExited
+        p_banio8.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_banio8MouseExited
+
+    private void banio8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio8MouseEntered
+        p_banio8.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_banio8MouseEntered
+
+    private void aulaMusicaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaMusicaMouseExited
+        p_aulaMusica.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_aulaMusicaMouseExited
+
+    private void aulaMusicaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaMusicaMouseEntered
+        p_aulaMusica.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_aulaMusicaMouseEntered
+
+    private void aulaMusicaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaMusicaMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulaMusica.jpg");
+    }//GEN-LAST:event_aulaMusicaMouseClicked
+
+    private void laboratorios1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios1MouseExited
+        p_laboratorios1.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_laboratorios1MouseExited
+
+    private void laboratorios1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios1MouseEntered
+        p_laboratorios1.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_laboratorios1MouseEntered
+
+    private void unayoeBienestarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unayoeBienestarMouseExited
+        p_unayoeBienestar.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_unayoeBienestarMouseExited
+
+    private void unayoeBienestarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unayoeBienestarMouseEntered
+        p_unayoeBienestar.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_unayoeBienestarMouseEntered
+
+    private void banio7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio7MouseExited
+        p_banio7.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_banio7MouseExited
+
+    private void banio7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio7MouseEntered
+        p_banio7.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_banio7MouseEntered
+
+    private void matriculaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_matriculaMouseEntered
+        p_matricula.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_matriculaMouseEntered
+
+    private void matriculaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_matriculaMouseExited
+        p_matricula.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_matriculaMouseExited
+
+    private void escuelaSoftwareMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaSoftwareMouseEntered
+        p_escuelaSoftware.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_escuelaSoftwareMouseEntered
+
+    private void escuelaSoftwareMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaSoftwareMouseExited
+        p_escuelaSoftware.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_escuelaSoftwareMouseExited
+
+    private void escuelaSistemasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaSistemasMouseEntered
+        p_escuelaSistemas.setBackground(new Color(200,200,200));
+    }//GEN-LAST:event_escuelaSistemasMouseEntered
+
+    private void escuelaSistemasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaSistemasMouseExited
+        p_escuelaSistemas.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_escuelaSistemasMouseExited
+
+    private void p_banio7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p_banio7MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_p_banio7MouseEntered
+
+    private void banio8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio8MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/banio8.jpg");
+    }//GEN-LAST:event_banio8MouseClicked
+
+    private void aulaNuevo2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaNuevo2MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulaNuevoPabellon1.jpg");
+    }//GEN-LAST:event_aulaNuevo2MouseClicked
+
+    private void banio2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio2MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/banio2.jpg");
+    }//GEN-LAST:event_banio2MouseClicked
+
+    private void auditorioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_auditorioMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/auditorio.jpg");
+    }//GEN-LAST:event_auditorioMouseClicked
+
+    private void losaDeportivaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_losaDeportivaMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/losaDeportiva.jpg");
+    }//GEN-LAST:event_losaDeportivaMouseClicked
+
+    private void banio1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio1MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/banio1.jpg");
+    }//GEN-LAST:event_banio1MouseClicked
+
+    private void vestidoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vestidoresMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/vestidores.jpg");
+    }//GEN-LAST:event_vestidoresMouseClicked
+
+    private void capillaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_capillaMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/capilla.jpg");
+    }//GEN-LAST:event_capillaMouseClicked
+
+    private void unmsmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unmsmMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/unmsm.jpg");
+    }//GEN-LAST:event_unmsmMouseClicked
+
+    private void aulaCodigo1001MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo1001MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulasCodigo2001.jpg");
+    }//GEN-LAST:event_aulaCodigo1001MouseClicked
+
+    private void direccion_ccMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_direccion_ccMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/cc.jpg");
+    }//GEN-LAST:event_direccion_ccMouseClicked
+
+    private void dgaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dgaMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/dga.jpg");
+    }//GEN-LAST:event_dgaMouseClicked
+
+    private void cerseuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerseuMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/cerseu.jpg");
+    }//GEN-LAST:event_cerseuMouseClicked
+
+    private void aulaCodigo1002MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo1002MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulasCodigo2002.jpg");
+    }//GEN-LAST:event_aulaCodigo1002MouseClicked
+
+    private void economiaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_economiaMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/economia.jpg");
+    }//GEN-LAST:event_economiaMouseClicked
+
+    private void moduloAtencionDocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_moduloAtencionDocenteMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/moduloAtencion.jpg");
+    }//GEN-LAST:event_moduloAtencionDocenteMouseClicked
+
+    private void quioscoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quioscoMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/quiosco.jpg");
+    }//GEN-LAST:event_quioscoMouseClicked
+
+    private void laboratoriosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratoriosMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/laboratorios.jpg");
+    }//GEN-LAST:event_laboratoriosMouseClicked
+
+    private void banio6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio6MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/banio6.jpg");
+    }//GEN-LAST:event_banio6MouseClicked
+
+    private void microDataCenterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_microDataCenterMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/microData.jpg");
+    }//GEN-LAST:event_microDataCenterMouseClicked
+
+    private void comedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comedorMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/comedor.jpg");
+    }//GEN-LAST:event_comedorMouseClicked
+
+    private void banio5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio5MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/banios5.jpg");
+    }//GEN-LAST:event_banio5MouseClicked
+
+    private void salaCatedraticoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salaCatedraticoMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/salaCatedratico.jpg");
+    }//GEN-LAST:event_salaCatedraticoMouseClicked
+
+    private void aulaCodigo2003MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2003MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulasCodigo2002.jpg");
+    }//GEN-LAST:event_aulaCodigo2003MouseClicked
+
+    private void tercioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tercioMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/tercio.jpg");
+    }//GEN-LAST:event_tercioMouseClicked
+
+    private void aulaCodigo2002MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2002MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulasCodigo2002.jpg");
+    }//GEN-LAST:event_aulaCodigo2002MouseClicked
+
+    private void aulaMagnaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaMagnaMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulaMagna.jpg");
+    }//GEN-LAST:event_aulaMagnaMouseClicked
+
+    private void laboratorioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorioMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/laboratorio2piso.jpg");
+    }//GEN-LAST:event_laboratorioMouseClicked
+
+    private void aulaCodigo2001MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aulaCodigo2001MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/aulasCodigo2001.jpg");
+    }//GEN-LAST:event_aulaCodigo2001MouseClicked
+
+    private void trofeosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_trofeosMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/trofeos.jpg");
+    }//GEN-LAST:event_trofeosMouseClicked
+
+    private void decanatoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_decanatoMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/decanato.jpg");
+    }//GEN-LAST:event_decanatoMouseClicked
+
+    private void laboratorios2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios2MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/laboratoriosPabellonNuevo3.jpg");
+    }//GEN-LAST:event_laboratorios2MouseClicked
+
+    private void banio7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banio7MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/banio7.jpg");
+    }//GEN-LAST:event_banio7MouseClicked
+
+    private void matriculaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_matriculaMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/matricula.jpg");
+    }//GEN-LAST:event_matriculaMouseClicked
+
+    private void escuelaSoftwareMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaSoftwareMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/dirEscSoft.jpg");
+    }//GEN-LAST:event_escuelaSoftwareMouseClicked
+
+    private void escuelaSistemasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_escuelaSistemasMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/DirEscSis.jpg");
+    }//GEN-LAST:event_escuelaSistemasMouseClicked
+
+    private void unayoeBienestarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unayoeBienestarMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/unayoe.jpg");
+    }//GEN-LAST:event_unayoeBienestarMouseClicked
+
+    private void publicidadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_publicidadMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/publicidad.jpg");
+    }//GEN-LAST:event_publicidadMouseClicked
+
+    private void soporteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_soporteMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/soporte.jpg");
+    }//GEN-LAST:event_soporteMouseClicked
+
+    private void departamentoAcademicoSistemasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_departamentoAcademicoSistemasMouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/departamentoAcademicoSis.jpg");
+    }//GEN-LAST:event_departamentoAcademicoSistemasMouseClicked
+
+    private void laboratorios3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios3MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/laboratorioCostado2.jpg");
+    }//GEN-LAST:event_laboratorios3MouseClicked
+
+    private void laboratorios4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios4MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/laboratorioCostado1.jpg");
+    }//GEN-LAST:event_laboratorios4MouseClicked
+
+    private void laboratorios1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laboratorios1MouseClicked
+        setImagenLabel(Dashboard.img_ubicacion, "/Imagenes/laboratorios3piso.jpg");
+    }//GEN-LAST:event_laboratorios1MouseClicked
+
+    void setColor(JPanel panel){
+        panel.setBackground(new Color(21,101,192));
+    }
+    void resetColor(JPanel panel){
+        panel.setBackground(new Color(18,90,173));
+    }
  
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Distancias;
@@ -367,7 +2483,33 @@ public class MapaPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> Nodo2Box;
     private javax.swing.JLabel app_name1;
     private javax.swing.JLabel app_name3;
-    private javax.swing.JPanel aulaNuevoP;
+    private javax.swing.JLabel auditorio;
+    private javax.swing.JLabel aulaCodigo1001;
+    private javax.swing.JLabel aulaCodigo1002;
+    private javax.swing.JLabel aulaCodigo2001;
+    private javax.swing.JLabel aulaCodigo2002;
+    private javax.swing.JLabel aulaCodigo2003;
+    private javax.swing.JLabel aulaMagna;
+    public javax.swing.JLabel aulaMusica;
+    public javax.swing.JLabel aulaNuevo1;
+    private javax.swing.JLabel aulaNuevo2;
+    public javax.swing.JLabel aulaNuevo4;
+    private javax.swing.JLabel banio1;
+    private javax.swing.JLabel banio2;
+    private javax.swing.JLabel banio5;
+    private javax.swing.JLabel banio6;
+    private javax.swing.JLabel banio7;
+    private javax.swing.JLabel banio8;
+    private javax.swing.JLabel capilla;
+    private javax.swing.JLabel cerseu;
+    private javax.swing.JLabel comedor;
+    private javax.swing.JLabel decanato;
+    private javax.swing.JLabel departamentoAcademicoSistemas;
+    private javax.swing.JLabel dga;
+    private javax.swing.JLabel direccion_cc;
+    private javax.swing.JLabel economia;
+    private javax.swing.JLabel escuelaSistemas;
+    private javax.swing.JLabel escuelaSoftware;
     private javax.swing.JTabbedPane fotosPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -377,5 +2519,71 @@ public class MapaPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanelPiso1;
     private javax.swing.JPanel jPanelPiso2;
     private javax.swing.JPanel jPanelPiso3;
+    private javax.swing.JLabel laboratorio;
+    private javax.swing.JLabel laboratorios;
+    private javax.swing.JLabel laboratorios1;
+    private javax.swing.JLabel laboratorios2;
+    private javax.swing.JLabel laboratorios3;
+    private javax.swing.JLabel laboratorios4;
+    private javax.swing.JLabel losaDeportiva;
+    private javax.swing.JLabel matricula;
+    private javax.swing.JLabel microDataCenter;
+    private javax.swing.JLabel moduloAtencionDocente;
+    private javax.swing.JPanel p_auditorio;
+    private javax.swing.JPanel p_aulaCodigo1001;
+    private javax.swing.JPanel p_aulaCodigo1002;
+    private javax.swing.JPanel p_aulaCodigo2001;
+    private javax.swing.JPanel p_aulaCodigo2002;
+    private javax.swing.JPanel p_aulaCodigo2003;
+    private javax.swing.JPanel p_aulaMagna;
+    public static final javax.swing.JPanel p_aulaMusica = new javax.swing.JPanel();
+    public static final javax.swing.JPanel p_aulaNuevo1 = new javax.swing.JPanel();
+    private javax.swing.JPanel p_aulaNuevo2;
+    public static final javax.swing.JPanel p_aulaNuevo4 = new javax.swing.JPanel();
+    private javax.swing.JPanel p_banio1;
+    private javax.swing.JPanel p_banio2;
+    private javax.swing.JPanel p_banio5;
+    private javax.swing.JPanel p_banio6;
+    private javax.swing.JPanel p_banio7;
+    private javax.swing.JPanel p_banio8;
+    private javax.swing.JPanel p_capilla;
+    private javax.swing.JPanel p_cerseu;
+    private javax.swing.JPanel p_comedor;
+    private javax.swing.JPanel p_decanato;
+    private javax.swing.JPanel p_departamentoAcademicoSistemas;
+    private javax.swing.JPanel p_dga;
+    private javax.swing.JPanel p_direccion_cc;
+    private javax.swing.JPanel p_economia;
+    private javax.swing.JPanel p_escuelaSistemas;
+    private javax.swing.JPanel p_escuelaSoftware;
+    private javax.swing.JPanel p_laboratorio;
+    private javax.swing.JPanel p_laboratorios;
+    private javax.swing.JPanel p_laboratorios1;
+    private javax.swing.JPanel p_laboratorios2;
+    private javax.swing.JPanel p_laboratorios3;
+    private javax.swing.JPanel p_laboratorios4;
+    private javax.swing.JPanel p_losaDeportiva;
+    private javax.swing.JPanel p_matricula;
+    private javax.swing.JPanel p_microDataCenter;
+    private javax.swing.JPanel p_moduloAtencionDocente;
+    private javax.swing.JPanel p_publicidad;
+    private javax.swing.JPanel p_puerta2;
+    private javax.swing.JPanel p_quiosco;
+    private javax.swing.JPanel p_salaCatedratico;
+    private javax.swing.JPanel p_soporte;
+    private javax.swing.JPanel p_tercio;
+    private javax.swing.JPanel p_trofeos;
+    private javax.swing.JPanel p_unayoeBienestar;
+    private javax.swing.JPanel p_unmsm;
+    private javax.swing.JPanel p_vestidores;
+    private javax.swing.JLabel publicidad;
+    private javax.swing.JLabel quiosco;
+    private javax.swing.JLabel salaCatedratico;
+    private javax.swing.JLabel soporte;
+    private javax.swing.JLabel tercio;
+    private javax.swing.JLabel trofeos;
+    private javax.swing.JLabel unayoeBienestar;
+    private javax.swing.JLabel unmsm;
+    private javax.swing.JLabel vestidores;
     // End of variables declaration//GEN-END:variables
 }
